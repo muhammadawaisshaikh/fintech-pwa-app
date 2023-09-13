@@ -28,4 +28,24 @@
             }
         }
     }
+    .search {
+        position: relative;
+        margin-top: 22px;
+        input {
+            border-radius: 32px;
+            border: 1px solid var(--stroke-gray, #B4B3BE);
+            height: 42px;
+            width: 100%;
+            padding-left: 40px;
+        }
+        .search-icon {
+            position: absolute;
+            top: 8px;
+            left: 23px;
+        }
+    }
+    .gift-cards {
+        margin-top: 28px;
+        box-shadow: 0px 0px 25px 0px #E2E7FC;
+    }
 }
