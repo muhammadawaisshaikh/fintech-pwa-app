@@ -1,0 +1,46 @@
+.investment-card {
+    border-radius: 0px 0px 4px 4px;
+    background: #FFF;
+    box-shadow: 0px 0px 25px 0px #E2E7FC;
+    .header {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 8px 12px;
+        gap: 8px;
+        border-radius: 4px 4px 0px 0px;
+        border-bottom: 1px solid rgba(20, 115, 230, 0.20);
+        
+        h4 {
+            font-size: 15px;
+            font-weight: 800;
+        }
+    }
+    .content-area {
+        padding: 8px 12px;
+        .content {
+            display: flex;
+            justify-content: space-between;
+            p {
+                margin-bottom: 0;
+                font-weight: 700;
+                font-size: 16px;
+            }
+            .label-h {
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+        .buttons {
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            a {
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.96px;
+                text-decoration: none;
+            }
+        }
+    }
+}

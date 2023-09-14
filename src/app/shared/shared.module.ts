@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { GiftCardComponent } from './gift-card/gift-card.component';
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { InvestmentCardComponent } from './investment-card/investment-card.component';
 
 @NgModule({
   declarations: [
-    GiftCardComponent
+    GiftCardComponent,
+    InvestmentCardComponent
   ],
   imports: [
     CommonModule,
@@ -14,6 +16,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   ],
   exports: [
     GiftCardComponent,
+    InvestmentCardComponent,
     SlickCarouselModule
   ]
 })

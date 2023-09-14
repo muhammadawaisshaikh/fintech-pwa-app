@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { GiftCardModel } from './gift-card.model';
 
 @Component({
   selector: 'app-gift-card',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./gift-card.component.scss']
 })
 export class GiftCardComponent {
+
+  @Input('data') data: GiftCardModel = {};
 
 }

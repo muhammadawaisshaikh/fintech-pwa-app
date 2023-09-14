@@ -17,12 +17,19 @@
 
 
         <div class="gift-cards">
-            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
-                (init)="slickInit($event)">
-                <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-                    <app-gift-card></app-gift-card>
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)">
+                <div ngxSlickItem *ngFor="let gift of gifts" class="slide">
+                    <app-gift-card [data]="gift"></app-gift-card>
                 </div>
             </ngx-slick-carousel>
+        </div>
+
+        <div class="investments">
+            <h3>Investments</h3>
+
+            <div class="investment mb-3" *ngFor="let investment of investments">
+                <app-investment-card [data]="investment"></app-investment-card>
+            </div>
         </div>
     </div>
 </div>

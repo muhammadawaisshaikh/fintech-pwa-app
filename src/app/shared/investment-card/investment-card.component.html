@@ -1,0 +1,22 @@
+<div class="investment-card">
+    <div class="header">
+        <img src='{{ "../../../assets/img/" + data.icon + ".png" }}' alt="mutual-funds" />
+        <h4 class="mb-0 ms-2">{{data.title}}</h4>
+    </div>
+    <div class="content-area">
+        <div class="content">
+            <div class="left">
+                <p class="label-h">Investment</p>
+                <p><strong>$ {{data.investment}}</strong></p>
+            </div>
+            <div class="right">
+                <p class="label-h">Current Value</p>
+                <p class="d-flex justify-content-end"><strong>$ {{data.currentValue}}</strong></p>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="#">BUY</a>
+            <a href="#">SELL</a>
+        </div>
+    </div>
+</div>
