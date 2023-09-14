@@ -1,11 +1,16 @@
 @import '/src/styles.scss';
 
 .header {
-    background: transparent;
     height: 55px;
     position: fixed;
     width: 100%;
     z-index: 999;
+    &.no-transparent {
+        background: $default;
+    }
+    &.transparent {
+        background: transparent;
+    }
 }
 
 .toggleContainer {

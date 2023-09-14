@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
 import { Location } from '@angular/common'
+import { Component, HostListener, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,7 @@ export class HeaderComponent {
   sidebar: boolean = false;
   fadeSection: boolean = false;
   backBtnState: boolean = false;
+  isheaderFix: boolean = false;
 
   routes: any = [
     { name: "Home", path: '/'},
@@ -22,7 +24,18 @@ export class HeaderComponent {
 
   constructor(
     private location: Location,
+    @Inject(DOCUMENT) private document: Document
   ) {}
+
+  // making header as colored and transparent onScroll position
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (this.document.body.scrollTop > 50 || this.document.documentElement.scrollTop > 50) {
+      this.isheaderFix = true;
+    } else {
+      this.isheaderFix = false;
+    }
+  }
 
   toggleMenu() {
     // animating icon

@@ -1,4 +1,4 @@
-<div class="header py-3">
+<div class="header py-3" [ngClass]="isheaderFix == true ? 'no-transparent' : 'transparent'">
     <div class="container">
         <div class="toggleContainer" (click)="toggleMenu()" [ngClass]="{'change': toggleButton}">
             <div class="bar1"></div>
